@@ -16,8 +16,13 @@
 
         public string PostalCode { get; set; }
 
-        public ICollection<Payment> Payment { get; set; }
-        public selles Selles { get; set; }
+        public DateTime ClientDateAddedToSystem { get; set; }// the date that when client added to system
+
+        public ICollection<Payment> Payment { get; set; } = new List<Payment>();
+
+        public ICollection<Item> Item { get; set; } = new List<Item>();
+
+        //public Item Items { get; set; }
 
 
     }
